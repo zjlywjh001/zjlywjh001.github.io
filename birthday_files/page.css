@@ -1,0 +1,93 @@
+body {
+	margin: 0px;
+}
+#re_header {
+	background: rgb(238, 238, 238); marign: 0;
+}
+#re_header .banner_text_top {
+	color: rgb(153, 153, 153); line-height: 20px; font-size: 12px; text-decoration: none;
+}
+#re_header .txt_blod {
+	color: rgb(255, 0, 0);
+}
+#re_header .ba_waikuang {
+	border-bottom-color: rgb(255, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#re_header a {
+	color: rgb(51, 51, 51); line-height: 22px; font-size: 12px; text-decoration: none;
+}
+#re_header a:hover {
+	color: rgb(51, 51, 51); line-height: 22px; font-size: 12px; text-decoration: underline;
+}
+#re_mediapaly {
+	margin: 0px auto; text-align: center;
+}
+.checkA {
+	background: rgb(255, 255, 193); width: 80px; height: 25px; text-align: center; color: rgb(170, 102, 0); line-height: 25px; font-size: 14px; font-weight: bold; text-decoration: none; margin-right: 6px; border-top-color: rgb(245, 181, 10); border-right-color: rgb(245, 181, 10); border-left-color: rgb(245, 181, 10); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; float: left; display: block;
+}
+.checkB {
+	background: rgb(255, 255, 193); width: 80px; height: 25px; text-align: center; color: rgb(170, 102, 0); line-height: 25px; font-size: 14px; font-weight: bold; text-decoration: none; margin-right: 6px; border-top-color: rgb(245, 181, 10); border-right-color: rgb(245, 181, 10); border-left-color: rgb(245, 181, 10); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; float: left; display: block;
+}
+.checkB {
+	background: rgb(245, 181, 10); color: rgb(153, 153, 153);
+}
+.xuanze_ts {
+	margin: 0px auto; width: 800px; text-align: center; color: rgb(255, 153, 0); font-size: 24px; font-weight: bold;
+}
+#xuanze_content {
+	margin: 10px auto 0px; width: 681px; text-align: center; font-size: 16px;
+}
+.xuanze_btn .yangshi {
+	background: rgb(255, 255, 193); width: 80px; height: 25px; text-align: center; color: rgb(153, 153, 153); line-height: 25px; font-size: 14px; font-weight: bold; margin-right: 6px; border-top-color: rgb(245, 181, 10); border-right-color: rgb(245, 181, 10); border-left-color: rgb(245, 181, 10); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; float: left; display: block;
+}
+#huizeng {
+	color: rgb(255, 153, 0); line-height: 23px; font-size: 12px; font-weight: bold; text-decoration: none;
+}
+#huizeng:hover {
+	color: rgb(255, 153, 0); text-decoration: underline;
+}
+.xuanze_input1 {
+	border: 3px solid rgb(245, 181, 10); border-image: none; width: 679px; height: 43px; text-align: left; color: rgb(153, 153, 153); padding-top: 20px;
+}
+.xuanze_input2 {
+	border: 3px solid rgb(245, 181, 10); border-image: none; width: 679px; height: 43px; text-align: left; color: rgb(153, 153, 153); padding-top: 20px;
+}
+.xuanze_input3 {
+	border: 3px solid rgb(245, 181, 10); border-image: none; width: 679px; height: 43px; text-align: left; color: rgb(153, 153, 153); padding-top: 20px;
+}
+.xuanze_input4 {
+	border: 3px solid rgb(245, 181, 10); border-image: none; width: 679px; height: 43px; text-align: left; color: rgb(153, 153, 153); padding-top: 20px;
+}
+.xuanze_input1 .ys1_str {
+	margin-left: 20px;
+}
+.xuanze_input2 .ys2_str {
+	margin-left: 20px;
+}
+.xuanze_input4 .ys4_str {
+	margin-left: 20px;
+}
+.ys1_name {
+	width: 222px;
+}
+.ys3_name {
+	width: 100px;
+}
+.ys4_name {
+	width: 310px;
+}
+#c1 {
+	display: block;
+}
+#c2 {
+	display: none;
+}
+#c3 {
+	display: none;
+}
+#c4 {
+	display: none;
+}
+#banquan {
+	margin: 5px auto 0px; width: 730px; text-align: center; color: rgb(153, 153, 153); font-size: 12px;
+}
