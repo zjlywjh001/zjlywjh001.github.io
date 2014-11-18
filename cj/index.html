@@ -15,10 +15,12 @@ var clickTimes = 0;
 var randnum = new Array();
 var num;
 var names = new Array();
+var reslist = new Array(31);
 function getRandNum(){
 randnum = GetRnd(0,num);
 for (var i=1;i<=30;i++) {
  document.getElementById(i).value = names[randnum[i]];
+ reslist[i] = names[randnum[i]];
 }
 }
 function start(){
@@ -58,6 +60,7 @@ function clearTimer(){
  noDupNum();
  clearInterval(timer);
  document.getElementById("inname").value=names.join("\n");
+ document.getElementById("result").value=reslist.join("\n");
  document.getElementById("start").disabled = false;
  document.getElementById("end").disabled = true;
  
@@ -163,6 +166,10 @@ function setValues(){
  <td>30<input name="text30" type="text" id="30" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
  </tr>
  </table>
+ <h3>本组获奖名单</h3>
+ <p>
+ <textarea class="form-control" id="result" rows="10"></textarea>
+ </p>
  <p> </p>
  <p> </p>
  <p> </p>
