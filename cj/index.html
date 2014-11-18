@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>抽奖系统</title>
+<script type="text/javascript">
+ 
+// global variables 
+var timer;
+var flag = new Array(100);
+var existingnum = new Array(100);
+var clickTimes = 0;
+var randnum = new Array();
+var num;
+var names = new Array();
+function getRandNum(){
+randnum = GetRnd(0,num);
+for (var i=1;i<=30;i++) {
+ document.getElementById(i).value = names[randnum[i]];
+}
+}
+function start(){
+clearInterval(timer);
+timer = setInterval('change()',50); 
+}
+function ok(){
+clearInterval(timer);
+}
+function GetRnd(min,max){
+ var randlist = new Array(31);
+ var tmp;
+ randlist[0]=-1;
+  for (var x=1;x<=30;x++) {
+   tmp = parseInt(Math.random()*(max-min+1));
+   while (randlist.contains(tmp)) tmp = parseInt(Math.random()*(max-min+1));
+   randlist[x] = tmp;
+  }
+return randlist;
+}
+function setTimer(){
+ names = document.getElementById("inname").value.split("\n");
+ num = names.length-1; 
+ //var a=new Array(1,2,3);
+ //alert(a);
+ //a.removeEleAt(0);
+ //alert(a);
+ if (num<29) {
+	alert("请输入至少150人的待抽奖名单。");
+	return ;
+ }
+ timer = setInterval("getRandNum();",10);
+ document.getElementById("start").disabled = true;
+ document.getElementById("end").disabled = false;
+}
+function clearTimer(){
+ noDupNum();
+ clearInterval(timer);
+ document.getElementById("inname").value=names.join("\n");
+ document.getElementById("start").disabled = false;
+ document.getElementById("end").disabled = true;
+ 
+}
+
+
+function noDupNum(){
+ // to remove the selected name
+  randnum.sort(function(a,b){return b-a;});
+  //alert(randnum);
+ for (var j=1;j<=randnum.length; j++) {
+  names.removeEleAt(randnum[j]);
+  // to reorganize the name number array!!
+  var o = 0;
+  for(p=0; p<names.length;p++){
+  if(typeof names[p]!="undefined"){
+  names[o] = names[p];
+  o++;
+  
+  }
+  }
+  num = names.length-1;
+  }
+ }
+// method to remove the element in the array
+Array.prototype.removeEleAt = function(dx)
+ {
+ if(isNaN(dx)||dx>this.length){return false;}
+ this.splice(dx,1);
+ }
+ 
+Array.prototype.contains = function(obj) { 
+  var i = this.length; 
+  while (i--) { 
+    if (this[i] === obj) { 
+      return true; 
+    } 
+  } 
+  return false; 
+}  
+function setValues(){
+ }
+</script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<center>
+<div> </div>
+<div id="main">
+ <div>
+ <h1>抽奖系统</h1>
+ <p>
+ <textarea class="form-control" id="inname" placeholder="请输入待抽奖的名单，一行一个名字(最后不要有多余的空行)" rows="10"></textarea>
+ </p>
+ <p>
+ <input id="start" type="button" value="开始" class="btn btn-primary btn-lg" onclick="setTimer()" />
+ <input id="end" type="button" value="停止" class="btn btn-primary btn-lg" onclick="clearTimer();setValues();" disabled/>
+</p>
+ <p>获奖名单</p>
+ <table width="961" height="102" class="table table-striped">
+ <tr>
+ <td>1<input name="text1" type="text" id="1" style="height:30px;width:190px;font-size:25;" size="28" readonly/></td>
+ <td>2<input name="text2" type="text" id="2" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>3<input name="text3" type="text" id="3" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>4<input name="text4" type="text" id="4" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>5<input name="text5" type="text" id="5" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ </tr>
+ <tr>
+ <td>6<input name="text6" type="text" id="6" style="height:30px;width:190px;font-size:25;" size="28" readonly/></td>
+ <td>7<input name="text7" type="text" id="7" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>8<input name="text8" type="text" id="8" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>9<input name="text9" type="text" id="9" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>10<input name="text10" type="text" id="10" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ </tr>
+ <tr>
+ <td>11<input name="text11" type="text" id="11" style="height:30px;width:190px;font-size:25;" size="28" readonly/></td>
+ <td>12<input name="text12" type="text" id="12" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>13<input name="text13" type="text" id="13" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>14<input name="text14" type="text" id="14" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>15<input name="text15" type="text" id="15" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ </tr>
+ <tr>
+ <td>16<input name="text16" type="text" id="16" style="height:30px;width:190px;font-size:25;" size="28" readonly/></td>
+ <td>17<input name="text17" type="text" id="17" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>18<input name="text18" type="text" id="18" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>19<input name="text19" type="text" id="19" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>20<input name="text20" type="text" id="20" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ </tr>
+ <tr>
+ <td>21<input name="text21" type="text" id="21" style="height:30px;width:190px;font-size:25;" size="28" readonly/></td>
+ <td>22<input name="text22" type="text" id="22" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>23<input name="text23" type="text" id="23" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>24<input name="text24" type="text" id="24" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>25<input name="text25" type="text" id="25" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ </tr>
+ <tr>
+ <td>26<input name="text26" type="text" id="26" style="height:30px;width:190px;font-size:25;" size="28" readonly/></td>
+ <td>27<input name="text27" type="text" id="27" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>28<input name="text28" type="text" id="28" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>29<input name="text29" type="text" id="29" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ <td>30<input name="text30" type="text" id="30" style="height:30px;width:190px;font-size:25;" size="20" readonly/></td>
+ </tr>
+ </table>
+ <p> </p>
+ <p> </p>
+ <p> </p>
+ </div>
+</div>
+<center>
+ </body>
+</html>
