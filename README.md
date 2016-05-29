@@ -1,4 +1,6 @@
 zjlywjh001.github.io
 ====================
 
-Happy birthday for Chen Wang Web
+#www.jarviswang.me
+
+This is the blog for myself.
