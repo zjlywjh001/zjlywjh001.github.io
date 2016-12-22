@@ -58,8 +58,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -156,16 +156,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.masthead')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -175,12 +175,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -262,17 +262,12 @@
 
         <div class="ui vertical stripe center aligned container">
             <div class="ui container">
-                <h1 class="ui largeheader">
-                  <img src="images/logo.png" /><br/>
-                  Ubiquitous System Security Lab.
-                </h1>
-                <h2>
-                  Welcome to USS(Ubiquitouse System Security)&nbsp;&nbsp;Lab.<br/>
-                  USS Lab. belongs to Electrical Engineering College in Zhejiang University. <br/>
-                    We are working on universal security area including <br/>
-                    traditional security, attack/defence and the security of internet of things(IOT).<br/>
-                    And now we are mainly focus on IOT and embedded system security.
+                <h2 class="ui largeheader">
+                    <img src="images/logo.png" /><br/> Ubiquitous System Security Lab.
                 </h2>
+                <h4>
+                    Welcome to USS(Ubiquitouse System Security)&nbsp;&nbsp;Lab.<br/> USS Lab. belongs to Electrical Engineering College in Zhejiang University. <br/> We are working on universal security area including <br/> traditional security, attack/defence and the security of internet of things(IOT).<br/> And now we are mainly focus on IOT and embedded system security.
+                </h4>
             </div>
         </div>
 
