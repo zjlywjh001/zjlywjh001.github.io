@@ -18,7 +18,6 @@
             display: none;
         }
         
-        
         .largeheader {
             margin-top: 3em;
             margin-bottom: 0em;
@@ -34,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -123,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -138,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -157,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -183,7 +184,7 @@
             <a class="item" href="projects/">Projects</a>
             <a class="item" href="publications.html">Publications</a>
             <a class="item" href="member/">Members</a>
-            <a class="item active" >About us</a>
+            <a class="item active">About us</a>
             <a class="item" href="/jarvisoj.html">Jarvis OJ</a>
             <a class="right item" href="/contact.html">Contact us</a>
         </div>
@@ -201,7 +202,7 @@
         <a class="item" href="projects/">Projects</a>
         <a class="item" href="publications.html">Publications</a>
         <a class="item" href="member/">Members</a>
-        <a class="item active" >About us</a>
+        <a class="item active">About us</a>
         <a class="item" href="/jarvisoj.html">Jarvis OJ</a>
         <a class="right item" href="/contact.html">Contact us</a>
     </div>
@@ -223,7 +224,7 @@
                     <a class="item" href="projects/">Projects</a>
                     <a class="item" href="publications.html">Publications</a>
                     <a class="item" href="member/">Members</a>
-                    <a class="item active" >About us</a>
+                    <a class="item active">About us</a>
                     <a class="item" href="/jarvisoj.html">Jarvis OJ</a>
                     <a class="right item" href="/contact.html">Contact us</a>
                 </div>
@@ -235,17 +236,11 @@
             <h1 class="ui header">About USS Lab.</h1>
             <div class="ui divider"></div>
             <h3>Ubiquitous System Security Lab., Zhejiang University</h3>
-            <p>This is Ex Machina, a responsive HTML5 site template freebie by TEMPLATED. Released for free under the Creative Commons Attribution license, so use it for whatever (personal or commercial) – just give us credit! Check out more of our stuff at our site or follow us on Twitter.
-            </p>
-            <p>
-            Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat. Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.
-            </p>
-            <p>
-            Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat. Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.
+            <p>USS Lab. belongs to Electrical Engineering College in Zhejiang University. We are working on universal security area including traditional security, attack/defence and the security of internet of things(IOT). And now we are mainly focus on IOT and embedded system security.
             </p>
             <br/>
         </div>
-        
+
         <div class="ui inverted vertical footer segment">
             <div class="ui center aligned container">
                 <!--<img src="assets/images/logo.png" class="ui centered mini image">-->
@@ -253,8 +248,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>

@@ -33,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -122,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -137,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -156,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -231,40 +233,67 @@
         </div>
 
         <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Yan Chen</h1>
+            <h1 class="ui header">Securing Sensors of Self-Driving Vehicles</h1>
             <div class="ui divider"></div>
             <div class="ui stackable four column grid">
-                <div class="thirteen wide column">
-                    <h2>Self-introduction</h2>
+                <div class="ten wide column">
+                    <h2>Introduction</h2>
                     <p>
-                        I am a Ph.D. student at Zhejiang University, and a member of USSLab (Ubiquitous System Security Laboratory) led by Prof. Wenyuan Xu. I received my undergraduate degree in Electrical Engineering from Zhejiang University in 2015. My research areas are the security and privacy of wireless communication and embedded systems, including automobiles, sensors, and Internet-of-Things devices.
+                    To improve road safety and driving experiences, autonomous vehicles have emerged recently, and they can sense their surroundings and navigate without human intervention. Although promising and improving safety features, the trustworthiness of these cars has to be examined before they can be widely adopted on the road. Unlike traditional network security, autonomous vehicles rely heavily on their sensory ability of their surroundings to make driving decision, which makes sensors an interface for attacks. Thus, in this project we examine the security of the sensors of autonomous vehicles, and investigate the trustworthiness of the ‘eyes’ of the cars.
                     </p>
+                    <p>
+                    Our work investigates sensors whose measurements are used to guide driving, i.e., millimeter-wave radars, ultrasonic sensors, forward-looking cameras. In particular, we present contactless attacks on these sensors and show our results collected both in the laboratory and outdoors on a Tesla Model S automobile. We show that using off-the-shelf hardware, we are able to perform jamming and spoofing attacks, which caused the Tesla’s blindness and malfunction, all of which could potentially lead to crashes and impair the safety of self-driving vehicles.
+                    </p>
+                    <img src="images/sssv2.png" width="100%"/>
                 </div>
-                <div class="three wide center aligned column">
-                    <img width="100%" src="images/ChenYan.JPG">
-                    <i class="mail icon"></i>&nbsp;&nbsp;yanchen@zju.edu.cn
-                    <br/>
-                    <a><i class="file pdf outline icon"></i>&nbsp;&nbsp;Curriculum Vitae</a>
+                <div class="six wide column">
+                    <h2>Group Members</h2>
+                    <div class="ui bottom aligned two column grid">
+                        <div class="column" style="text-align:center;">
+                            <a>
+                                <img width="100%" src="images/xuwenyuan.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a>Xu Wenyuan<br/>(Professor)</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a href="member/yanchen.html">
+                                <img width="100%" src="images/ChenYan.JPG">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a href="member/yanchen.html">Yan Chen<br/>(Ph.D. Student)</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a href="member/jiaweibin.html">
+                                <img width="100%" src="images/jiaweibin.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a href="member/jiaweibin.html">Jia Weibin<br/>(Master Student)</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a>
+                                <img width="100%" src="images/noimg.png">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a>Liu Jianhao</a>
+                            </div>
+                        </div>
+                    </div>
                     <br/>
                 </div>
             </div>
             <br/>
         </div>
-        
-        <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Projects</h1>
-            <div class="ui divider"></div>
-            <p>Securing Sensors of Self-Driving Vehicles</p>
-            <p>Securing In-Car Wireless Sensor Networks</p>
-        </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Publications</h1>
             <div class="ui divider"></div>
             <p>Chen Yan, Wenyuan Xu, Jianhao Liu, "Can you trust autonomous vehicles: Contactless attacks against sensors of self-driving vehicles." DEF CON 24 (2016)</p>
-            <p>Chen Yan, Wenyuan Xu, "Security and Privacy Challenges of Modern Automobiles" (in Chinese), Communications of the CCF, Volume 12, Number 1, 20-27, 2016</p>
-            
-
+            <br/>
+            <div class="ui divider"></div>
         </div>
 
 
@@ -276,8 +305,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>

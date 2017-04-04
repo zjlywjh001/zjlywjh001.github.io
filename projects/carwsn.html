@@ -33,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -122,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -137,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -156,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -231,40 +233,42 @@
         </div>
 
         <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Yan Chen</h1>
+            <h1 class="ui header">Securing In-Car Wireless Sensor Networks</h1>
             <div class="ui divider"></div>
             <div class="ui stackable four column grid">
-                <div class="thirteen wide column">
-                    <h2>Self-introduction</h2>
+                <div class="ten wide column">
+                    <h2>Introduction</h2>
                     <p>
-                        I am a Ph.D. student at Zhejiang University, and a member of USSLab (Ubiquitous System Security Laboratory) led by Prof. Wenyuan Xu. I received my undergraduate degree in Electrical Engineering from Zhejiang University in 2015. My research areas are the security and privacy of wireless communication and embedded systems, including automobiles, sensors, and Internet-of-Things devices.
+                    Wireless networks are being integrated into the modern automobile. The security and privacy implications of such in-car networks, however, are not well understood as their transmissions propagate beyond the confines of a car’s body. To understand the risks associated with these wireless systems, this project presents a privacy and security evaluation of wireless Tire Pressure Monitoring Systems using both laboratory experiments with isolated tire pressure sensor modules and experiments with a complete vehicle system.
+                    </p>
+                    <p>
+                    Tire Pressure Monitoring Systems (TPMS) monitors air pressure inside tires and trigger dashboard warnings wirelessly if a tire's pressure drops. Through our reverse-engineering effort, we have shown that TPMS wireless transmissions lack security protection common in basic computer networking, such as input validation, data encryption, or authentication. TPMS wireless signals can be intercepted 40 meters away using a simple receiver, which makes it feasible to track drivers' locations. We also demonstrated that a transmitter that "spoofs" the sensor signal can easily send false readings and trigger a car's dashboard warning display. We are working on hardware and software solutions to secure TPMS and other in-car sensor networks.
                     </p>
                 </div>
-                <div class="three wide center aligned column">
-                    <img width="100%" src="images/ChenYan.JPG">
-                    <i class="mail icon"></i>&nbsp;&nbsp;yanchen@zju.edu.cn
-                    <br/>
-                    <a><i class="file pdf outline icon"></i>&nbsp;&nbsp;Curriculum Vitae</a>
+                <div class="six wide column">
+                    <h2>Group Members</h2>
+                    <div class="ui bottom aligned two column grid">
+                        <div class="column" style="text-align:center;">
+                            <a>
+                                <img width="100%" src="images/xuwenyuan.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a>Xu Wenyuan<br/>(Professor)</a>
+                            </div>
+                        </div>
+                    </div>
                     <br/>
                 </div>
             </div>
             <br/>
         </div>
-        
-        <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Projects</h1>
-            <div class="ui divider"></div>
-            <p>Securing Sensors of Self-Driving Vehicles</p>
-            <p>Securing In-Car Wireless Sensor Networks</p>
-        </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Publications</h1>
             <div class="ui divider"></div>
-            <p>Chen Yan, Wenyuan Xu, Jianhao Liu, "Can you trust autonomous vehicles: Contactless attacks against sensors of self-driving vehicles." DEF CON 24 (2016)</p>
-            <p>Chen Yan, Wenyuan Xu, "Security and Privacy Challenges of Modern Automobiles" (in Chinese), Communications of the CCF, Volume 12, Number 1, 20-27, 2016</p>
-            
-
+            <p>Ishtiaq Roufa, Rob Miller, et al. "Security and privacy vulnerabilities of in-car wireless networks: A tire pressure monitoring system case study." 19th USENIX Security Symposium, Washington DC. 2010. </p>
+            <br/>
+            <div class="ui divider"></div>
         </div>
 
 
@@ -276,8 +280,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>

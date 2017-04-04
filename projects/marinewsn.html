@@ -33,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -122,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -137,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -156,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -231,40 +233,64 @@
         </div>
 
         <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Yan Chen</h1>
+            <h1 class="ui header">Marine Wireless Sensor Network (MWSN)</h1>
             <div class="ui divider"></div>
             <div class="ui stackable four column grid">
-                <div class="thirteen wide column">
-                    <h2>Self-introduction</h2>
+                <div class="ten wide column">
+                    <h2>Introduction</h2>
                     <p>
-                        I am a Ph.D. student at Zhejiang University, and a member of USSLab (Ubiquitous System Security Laboratory) led by Prof. Wenyuan Xu. I received my undergraduate degree in Electrical Engineering from Zhejiang University in 2015. My research areas are the security and privacy of wireless communication and embedded systems, including automobiles, sensors, and Internet-of-Things devices.
+                        The intertidal zone – the region between the low and high tide lines along the coasts of the world’s oceans – serves as a key test bed for exploring the effects of global climate change on species distributions and abundances. We are designing and deploying wireless “biomimetic” sensor networks (WSN) that monitor environmental parameters pertaining to climate change impacts (e.g., temperature).
                     </p>
+                    <img src="images/marine4.JPG" width="100%"/>
+                    <img src="images/marine1.png" width="100%"/>
+                    <p>
+                        Monitoring the intertidal zone using WSNs remains challenging because the constraints of sizes, energy, and dynamic environment. The size of a sensor node should no bigger than a real mussel include sensor chip, antenna and battery, which requires a carefully design of the hardware and ultra-low power consumption. Unlike the traditional WSNs, MWSN faces the challenges of the poor deployment environment – periodic tidal. Sensor nodes deployed in intertidal zone will periodically submerged in water and loss connectivity with network. With the rise of the water level, the entire network will gradually be submerged and the network is disconnected eventually. To efficiently rebuild the network with minimum energy consumption is the first challenge. We now have successfully deployed three MWSNs around world.
+                    </p>
+                    <img src="images/marine2.png" width="100%"/>
+                    <img src="images/marine3.png" width="100%"/>
                 </div>
-                <div class="three wide center aligned column">
-                    <img width="100%" src="images/ChenYan.JPG">
-                    <i class="mail icon"></i>&nbsp;&nbsp;yanchen@zju.edu.cn
-                    <br/>
-                    <a><i class="file pdf outline icon"></i>&nbsp;&nbsp;Curriculum Vitae</a>
+                <div class="six wide column">
+                    <h2>Group Members</h2>
+                    <div class="ui bottom aligned two column grid">
+                        <div class="column" style="text-align:center;">
+                            <a href="member/zhouxinyan.html">
+                                <img width="100%" src="images/xinyan.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a href="member/zhouxinyan.html">Zhou Xinyan<br/>(Ph.D. Student)</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a>
+                                <img width="100%" src="images/noimg.png">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a>Xu Miao</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a>
+                                <img width="100%" src="images/noimg.png">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a>Li Xiaopeng</a>
+                            </div>
+                        </div>
+                    </div>
                     <br/>
                 </div>
             </div>
             <br/>
         </div>
-        
-        <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Projects</h1>
-            <div class="ui divider"></div>
-            <p>Securing Sensors of Self-Driving Vehicles</p>
-            <p>Securing In-Car Wireless Sensor Networks</p>
-        </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Publications</h1>
             <div class="ui divider"></div>
-            <p>Chen Yan, Wenyuan Xu, Jianhao Liu, "Can you trust autonomous vehicles: Contactless attacks against sensors of self-driving vehicles." DEF CON 24 (2016)</p>
-            <p>Chen Yan, Wenyuan Xu, "Security and Privacy Challenges of Modern Automobiles" (in Chinese), Communications of the CCF, Volume 12, Number 1, 20-27, 2016</p>
-            
-
+            <p>Taco: Temperature-aware compensation for time synchronization in wireless sensor networks (MobiHoc, 2013)</p>
+            <p>LESS: Link Estimation with Sparse Sampling in Dynamic WSNs (Under review)</p>
+            <p>ACT: An Automated Configuration Tool for Low Power Solution of Wireless Sensor Nodes (Under review)</p>
+            <br/>
+            <div class="ui divider"></div>
         </div>
 
 
@@ -276,8 +302,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>

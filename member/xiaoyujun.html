@@ -33,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -122,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -137,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -156,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -183,7 +185,7 @@
             <a class="item" href="/publications.html">Publications</a>
             <a class="item" href="member/">Members</a>
             <a class="item" href="/about.html">About us</a>
-            <a class="item" href="/jarvisoj.html">Jarvis OJ</a>
+            <a class="item" href="#">Jarvis OJ</a>
             <a class="right item" href="/contact.html">Contact us</a>
         </div>
     </div>
@@ -231,18 +233,19 @@
         </div>
 
         <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Yan Chen</h1>
+            <h1 class="ui header">Xiao Yujun</h1>
             <div class="ui divider"></div>
             <div class="ui stackable four column grid">
-                <div class="thirteen wide column">
+                <div class="twelve wide column">
                     <h2>Self-introduction</h2>
                     <p>
-                        I am a Ph.D. student at Zhejiang University, and a member of USSLab (Ubiquitous System Security Laboratory) led by Prof. Wenyuan Xu. I received my undergraduate degree in Electrical Engineering from Zhejiang University in 2015. My research areas are the security and privacy of wireless communication and embedded systems, including automobiles, sensors, and Internet-of-Things devices.
+                        I’m in the final year of the master program in the USSLAB.My research interest is cyber-physical security, and especially for the security of industrial control system (ICS). In my work, I use side channel analysis to detect the attacks against ICS and thus augment the security of ICS. I am familiar with machine learning and side channel analysis, such as power consumption, EMI, acoustic and thermal.
+
                     </p>
                 </div>
-                <div class="three wide center aligned column">
-                    <img width="100%" src="images/ChenYan.JPG">
-                    <i class="mail icon"></i>&nbsp;&nbsp;yanchen@zju.edu.cn
+                <div class="four wide center aligned column">
+                    <img width="100%" src="images/xiaoyujun.jpg">
+                    <i class="mail icon"></i>&nbsp;&nbsp;xiaoyujun2@gmail.com
                     <br/>
                     <a><i class="file pdf outline icon"></i>&nbsp;&nbsp;Curriculum Vitae</a>
                     <br/>
@@ -250,20 +253,20 @@
             </div>
             <br/>
         </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Projects</h1>
             <div class="ui divider"></div>
-            <p>Securing Sensors of Self-Driving Vehicles</p>
-            <p>Securing In-Car Wireless Sensor Networks</p>
+            <p>The ICS security monitoring system based on side channel analysis</p>
+            <p>Mid-air gesture authentication with Leap Motion</p>
         </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Publications</h1>
             <div class="ui divider"></div>
-            <p>Chen Yan, Wenyuan Xu, Jianhao Liu, "Can you trust autonomous vehicles: Contactless attacks against sensors of self-driving vehicles." DEF CON 24 (2016)</p>
-            <p>Chen Yan, Wenyuan Xu, "Security and Privacy Challenges of Modern Automobiles" (in Chinese), Communications of the CCF, Volume 12, Number 1, 20-27, 2016</p>
-            
+            <p>NIPAD: a non-invasive power-based anomaly detection scheme for programmable logic controllers (accepted by Frontiers of Information Technology & Electronic Engineering)</p>
+            <p>The PLC security monitor system based on side-channel information (in Chinese)</p>
+
 
         </div>
 
@@ -276,8 +279,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>

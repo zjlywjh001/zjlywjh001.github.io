@@ -33,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -122,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -137,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -156,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -231,40 +233,43 @@
         </div>
 
         <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Yan Chen</h1>
+            <h1 class="ui header">Ghost Talk</h1>
             <div class="ui divider"></div>
             <div class="ui stackable four column grid">
-                <div class="thirteen wide column">
-                    <h2>Self-introduction</h2>
+                <div class="ten wide column">
+                    <h2>Introduction</h2>
                     <p>
-                        I am a Ph.D. student at Zhejiang University, and a member of USSLab (Ubiquitous System Security Laboratory) led by Prof. Wenyuan Xu. I received my undergraduate degree in Electrical Engineering from Zhejiang University in 2015. My research areas are the security and privacy of wireless communication and embedded systems, including automobiles, sensors, and Internet-of-Things devices.
+                        Electromagnetic interference (EMI) affects circuits by inducing voltages on conductors. Analog sensing of signals on the order of a few millivolts is particularly sensitive to interference. This project (1) measures the susceptibility of analog sensor systems to signal injection attacks by intentional, low-power emission of chosen electromagnetic waveforms, and (2) proposes defense mechanisms to reduce the risks.
+                    </p>
+                    <p>
+                        We use specially crafted EMI at varying power and distance to measure susceptibility of sensors in implantable medical devices and consumer electronics. Results show that at distances of 1-2m, consumer electronic devices containing microphones are vulnerable to the injection of bogus audio signals. Our measurements show that in free air, intentional EMI under 10 W can inhibit pacing and induce defibrillation shocks at distances up to 1-2m on implantable cardiac electronic devices. However, with the sensing leads and medical devices immersed in a saline bath to better approximate the human body, the same experiment decreases to about 5 cm.
                     </p>
                 </div>
-                <div class="three wide center aligned column">
-                    <img width="100%" src="images/ChenYan.JPG">
-                    <i class="mail icon"></i>&nbsp;&nbsp;yanchen@zju.edu.cn
-                    <br/>
-                    <a><i class="file pdf outline icon"></i>&nbsp;&nbsp;Curriculum Vitae</a>
+                <div class="six wide column">
+                    <h2>Group Members</h2>
+                    <div class="ui bottom aligned two column grid">
+                        <div class="column" style="text-align:center;">
+                            <a href="member/zhuangzhou.html">
+                                <img width="100%" src="images/zhuangzhou.png">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a href="member/zhuangzhou.html">Zhuang Zhou<br/>(Master Student)</a>
+                            </div>
+                        </div>
+                    </div>
                     <br/>
                 </div>
             </div>
             <br/>
         </div>
-        
-        <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Projects</h1>
-            <div class="ui divider"></div>
-            <p>Securing Sensors of Self-Driving Vehicles</p>
-            <p>Securing In-Car Wireless Sensor Networks</p>
-        </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Publications</h1>
             <div class="ui divider"></div>
-            <p>Chen Yan, Wenyuan Xu, Jianhao Liu, "Can you trust autonomous vehicles: Contactless attacks against sensors of self-driving vehicles." DEF CON 24 (2016)</p>
-            <p>Chen Yan, Wenyuan Xu, "Security and Privacy Challenges of Modern Automobiles" (in Chinese), Communications of the CCF, Volume 12, Number 1, 20-27, 2016</p>
-            
-
+            <p>Denis Foo Kune, John Backes, Shane Clark, Dan Kramer, Matthew Reynolds, Kevin Fu, Yongdae Kim, and Wenyuan Xu</p>
+            <p>Ghost Talk: Mitigating EMI Signal Injection Attacks against Analog Sensors in Proceedings of the IEEE Symposium on Security & Privacy, 2013</p>
+            <br/>
+            <div class="ui divider"></div>
         </div>
 
 
@@ -276,8 +281,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>

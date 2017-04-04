@@ -33,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -122,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -137,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -156,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -231,40 +233,48 @@
         </div>
 
         <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Yan Chen</h1>
+            <h1 class="ui header">CAN Omega</h1>
             <div class="ui divider"></div>
             <div class="ui stackable four column grid">
-                <div class="thirteen wide column">
-                    <h2>Self-introduction</h2>
+                <div class="ten wide column">
+                    <h2>Introduction</h2>
                     <p>
-                        I am a Ph.D. student at Zhejiang University, and a member of USSLab (Ubiquitous System Security Laboratory) led by Prof. Wenyuan Xu. I received my undergraduate degree in Electrical Engineering from Zhejiang University in 2015. My research areas are the security and privacy of wireless communication and embedded systems, including automobiles, sensors, and Internet-of-Things devices.
+                        CAN Omega is an ultimate CAN bus tool we developed for car hacking. It also comes with a powerful cross-platform GUI tool, with full support for OBD-II features include the following:
+                    </p>
+                    <p>
+                        ISO15765 CAN250Kbps 11bit<br/> ISO15765 CAN250Kbps 29bit<br/> ISO15765 CAN500Kbps 11bit<br/> ISO15765 CAN500Kbps 29bit<br/> ISO9141-2 5bps Init<br/> ISO14230 KWP2000 5bps Init<br/> ISO14230 KWP2000 Fast Init<br/> SAE J1850 PWM<br/> SAE J1850 VPW<br/> Multi-Frame Support<br/> Soft-controlled end-point matching resistors<br/> Support for incomming CAN FD (use MCP2517FD in place of MCP2515)<br/>
+                    </p>
+                    <p>
+                    Check out the open-sourced project at:<br/>
+                    <a href="https://github.com/zjlywjh001/CAN_OMEGA" target="_blank">https://github.com/zjlywjh001/CAN_OMEGA</a>
+                        <img src="images/cm2.jpeg" width="100%"/>
+                        <img src="images/cm.png" width="100%"/>
                     </p>
                 </div>
-                <div class="three wide center aligned column">
-                    <img width="100%" src="images/ChenYan.JPG">
-                    <i class="mail icon"></i>&nbsp;&nbsp;yanchen@zju.edu.cn
-                    <br/>
-                    <a><i class="file pdf outline icon"></i>&nbsp;&nbsp;Curriculum Vitae</a>
+                <div class="six wide column">
+                    <h2>Group Members</h2>
+                    <div class="ui bottom aligned two column grid">
+                        <div class="column" style="text-align:center;">
+                            <a>
+                                <img width="100%" src="images/wjh.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a>Wang Jiaheng<br/>(Master Student)</a>
+                            </div>
+                        </div>
+                    </div>
                     <br/>
                 </div>
             </div>
             <br/>
         </div>
-        
-        <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Projects</h1>
-            <div class="ui divider"></div>
-            <p>Securing Sensors of Self-Driving Vehicles</p>
-            <p>Securing In-Car Wireless Sensor Networks</p>
-        </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Publications</h1>
             <div class="ui divider"></div>
-            <p>Chen Yan, Wenyuan Xu, Jianhao Liu, "Can you trust autonomous vehicles: Contactless attacks against sensors of self-driving vehicles." DEF CON 24 (2016)</p>
-            <p>Chen Yan, Wenyuan Xu, "Security and Privacy Challenges of Modern Automobiles" (in Chinese), Communications of the CCF, Volume 12, Number 1, 20-27, 2016</p>
-            
-
+            <p></p>
+            <br/>
+            <div class="ui divider"></div>
         </div>
 
 
@@ -276,8 +286,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>

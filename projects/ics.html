@@ -33,8 +33,8 @@
             font-size: 2em;
         }
         
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
             margin-top: 3em;
         }
         
@@ -122,11 +122,13 @@
             width: 100%;
             height: 600px;
         }
-        .beian:hover{
-            color:white;
+        
+        .beian:hover {
+            color: white;
         }
+        
         .beian {
-            color:grey;
+            color: grey;
         }
     </style>
 
@@ -137,16 +139,16 @@
     <script src="third-party/Swiper-3.4.1/dist/js/swiper.min.js"></script>
     <script>
         $(document)
-            .ready(function () {
+            .ready(function() {
 
                 // fix menu when passed
                 $('.secondary.menu')
                     .visibility({
-                        once: false
-                        , onBottomPassed: function () {
+                        once: false,
+                        onBottomPassed: function() {
                             $('.fixed.menu').transition('fade in');
-                        }
-                        , onBottomPassedReverse: function () {
+                        },
+                        onBottomPassedReverse: function() {
                             $('.fixed.menu').transition('fade out');
                         }
                     });
@@ -156,12 +158,12 @@
                 $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
 
                 var swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination'
-                    , paginationClickable: true
-                    , speed: 1000
-                    , centeredSlides: true
-                    , autoplay: 2500
-                , });
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    autoplay: 2500,
+                });
 
             });
     </script>
@@ -231,40 +233,73 @@
         </div>
 
         <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Yan Chen</h1>
+            <h1 class="ui header">The ICS security monitoring system based on side channel analysis</h1>
             <div class="ui divider"></div>
             <div class="ui stackable four column grid">
-                <div class="thirteen wide column">
-                    <h2>Self-introduction</h2>
+                <div class="ten wide column">
+                    <h2>Introduction</h2>
+                    <img src="images/ics2.jpg" width="100%"/>
                     <p>
-                        I am a Ph.D. student at Zhejiang University, and a member of USSLab (Ubiquitous System Security Laboratory) led by Prof. Wenyuan Xu. I received my undergraduate degree in Electrical Engineering from Zhejiang University in 2015. My research areas are the security and privacy of wireless communication and embedded systems, including automobiles, sensors, and Internet-of-Things devices.
+                        Industrial control system (ICS) is widely used in critical infrastructures, which makes it a popular target for attacks to cause catastrophic physical damage. As one of the most critical components in ICS, programmable logic controller (PLC) controls the actuators directly. A PLC executing a malicious program can cause significant property loss or even casualties. Meanwhile, the number of attacks targeted at PLCs has increased noticeably during last few years, showing the vulnerability of PLC and the importance of PLC protection.
                     </p>
+                    <img src="images/ics3.jpg" width="100%"/>
+                    <p>
+                        This work focuses on analyzing the side channel signals while PLC is running, such as power consumption, EMI, acoustic, thermal and so on. Through analyzing those side channel signals, we are able to detect the malicious software execution in PLC with a non-invasive manner. Besides, we can detect both existing attacks and the ones that may emerge overtime with side channel signals. Thus, we can augment the security of ICS effectively with little effect on the original systems.
+                    </p>
+                    <p>
+                    We have already achieved a high detection accuracy through power analysis. We measured the power consumption through inserting a shunt resistor in series with the CPU in a PLC while it is executing instructions, and then we extract a discriminative feature set from the power trace, and train a long short-term memory (LSTM) neural network with the features of normal samples to achieve anomaly detection. Thus, we can detect the attacks against ICS. Below is a GUI for real time PLC monitoring.
+                    </p>
+                    <img src="images/ics4.jpg" width="100%"/>
                 </div>
-                <div class="three wide center aligned column">
-                    <img width="100%" src="images/ChenYan.JPG">
-                    <i class="mail icon"></i>&nbsp;&nbsp;yanchen@zju.edu.cn
-                    <br/>
-                    <a><i class="file pdf outline icon"></i>&nbsp;&nbsp;Curriculum Vitae</a>
+                <div class="six wide column">
+                    <h2>Group Members</h2>
+                    <div class="ui bottom aligned two column grid">
+                        <div class="column" style="text-align:center;">
+                            <a href="member/xiaoyujun.html">
+                                <img width="100%" src="images/xiaoyujun.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a href="member/xiaoyujun.html">Xiao Yujun<br/>(Master Student)</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a href="member/mazhuoran.html">
+                                <img width="100%" src="images/mazhuoran.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a href="member/mazhuoran.html">Ma Zhuoran<br/>(Master Student)</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a href="member/zhangguoming.html">
+                                <img width="100%" src="images/zhangguoming.jpg">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a href="member/zhangguoming.html">Zhang Guoming<br/>(Ph.D. Student)</a>
+                            </div>
+                        </div>
+                        <div class="column" style="text-align:center;">
+                            <a>
+                                <img width="100%" src="images/noimg.png">
+                            </a>
+                            <div class="pro_intro_txtstyle">
+                                <a>Wang Haoran<br/>(Master Student)</a>
+                            </div>
+                        </div>
+                    </div>
                     <br/>
                 </div>
             </div>
             <br/>
         </div>
-        
-        <div class="ui vertical stripe container segment">
-            <h1 class="ui header">Projects</h1>
-            <div class="ui divider"></div>
-            <p>Securing Sensors of Self-Driving Vehicles</p>
-            <p>Securing In-Car Wireless Sensor Networks</p>
-        </div>
-        
+
         <div class="ui vertical stripe container segment">
             <h1 class="ui header">Publications</h1>
             <div class="ui divider"></div>
-            <p>Chen Yan, Wenyuan Xu, Jianhao Liu, "Can you trust autonomous vehicles: Contactless attacks against sensors of self-driving vehicles." DEF CON 24 (2016)</p>
-            <p>Chen Yan, Wenyuan Xu, "Security and Privacy Challenges of Modern Automobiles" (in Chinese), Communications of the CCF, Volume 12, Number 1, 20-27, 2016</p>
-            
-
+            <p>The PLC security monitor system based on side-channel information (in Chinese).</p>
+            <p>NIPAD: a non-invasive power-based anomaly detection scheme for programmable logic controllers. (accepted by Frontiers of Information Technology & Electronic Engineering)</p>
+            <br/>
+            <div class="ui divider"></div>
         </div>
 
 
@@ -276,8 +311,9 @@
                     Copyright &copy; USS Lab. 2016-2017
                     <br/> Zhejiang University, Hangzhou, Zhejiang, China. 310027
                     <br/> All Right Reserved.
-                    <br/><a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
-                    <b>浙ICP备16045554号-1</b>
+                    <br/>
+                    <a class="beian" href="http://www.miitbeian.gov.cn/" target="_blank">
+                        <b>浙ICP备16045554号-1</b>
                     </a>
                 </div>
             </div>
